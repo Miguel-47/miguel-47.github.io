@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miguel Almeida · Software engineer</title>
+<meta name="description" content="Miguel Almeida, software engineer in Aveiro, Portugal. Automotive software at Aumovio (formerly Continental), co-founder of SproutBolt.">
+<meta property="og:title" content="Miguel Almeida · Software engineer">
+<meta property="og:description" content="Automotive software at Aumovio (formerly Continental), co-founder of SproutBolt.">
+<meta property="og:image" content="https://miguel-47.github.io/img/miguel.jpg">
+<meta property="og:url" content="https://miguel-47.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23123b5e'/><text x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='700' font-size='30' fill='%23fff'>MA</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f8fa; --surface: #ffffff; --ink: #14202b; --muted: #55636f; --line: #dfe4ea;
+    --accent: #1f5f99; --accent-soft: #e6eff8; --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e141a; --surface: #151e26; --ink: #e7edf2; --muted: #9aa8b4; --line: #26323d; --accent: #7fb6ea; --accent-soft: #1a2a39; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 Inter, system-ui, sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+  html[data-lang="en"] [lang="pt"], html[data-lang="pt"] [lang="en"] { display: none; }
+  header.top { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+  .name { font-weight: 700; text-decoration: none; color: var(--ink); }
+  .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .lang button { font: 500 13px var(--mono); background: none; border: 0; color: var(--muted); padding: 6px 12px; cursor: pointer; }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+  .hero { display: grid; grid-template-columns: 160px 1fr; gap: 32px; align-items: center; padding: 40px 0 56px; }
+  .hero img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .role { color: var(--muted); margin: 0 0 16px; }
+  .lead { font-size: 1.15rem; margin: 0 0 20px; max-width: 34em; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-block; padding: 9px 16px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 500; }
+  .btn--main { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+  section { padding: 40px 0; border-top: 1px solid var(--line); }
+  h2 { font: 500 13px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 20px; }
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+  .skills li { background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; font-size: .95rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .card small { font: 500 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+  .card h3 { margin: 6px 0 8px; font-size: 1.1rem; }
+  .card p { margin: 0; color: var(--muted); }
+  .card--photo { padding: 0; overflow: hidden; grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
+  .card--photo img { width: 100%; height: 100%; object-fit: cover; min-height: 220px; }
+  .card--photo div { padding: 20px; }
+  .timeline { list-style: none; padding: 0; margin: 0; }
+  .timeline li { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .timeline li:last-child { border-bottom: 0; }
+  .timeline span { font: 500 13px var(--mono); color: var(--muted); }
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
+  @media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; gap: 20px; padding-top: 16px; }
+    .hero img { width: 120px; height: 120px; }
+    .card--photo { grid-template-columns: 1fr; }
+    .timeline li { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="name" href="#">Miguel Almeida</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="pt" aria-pressed="false">PT</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <img src="img/miguel.jpg" alt="Miguel Almeida">
+      <div>
+        <h1>Miguel Almeida</h1>
+        <p class="role"><span lang="en">Software engineer · Aveiro, Portugal</span><span lang="pt">Engenheiro de software · Aveiro, Portugal</span></p>
+        <p class="lead">
+          <span lang="en">I build software for the automotive industry, where nothing can fail. I also co-founded SproutBolt, which makes websites and apps for small local businesses.</span>
+          <span lang="pt">Desenvolvo software para a indústria automóvel, onde nada pode falhar. Sou também cofundador da SproutBolt, que faz websites e apps para pequenos negócios locais.</span>
+        </p>
+        <div class="links">
+          <a class="btn btn--main" href="mailto:luismiguelra1015@gmail.com"><span lang="en">Email me</span><span lang="pt">Enviar email</span></a>
+          <a class="btn" href="miguel-almeida-cv.pdf" download><span lang="en">Download CV</span><span lang="pt">Descarregar CV</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/miguel-almeida-22a58a284" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/Miguel-47" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <h2><span lang="en">Skills</span><span lang="pt">Competências</span></h2>
+      <ul class="skills">
+        <li>C <span lang="en">and</span><span lang="pt">e</span> Python</li>
+        <li><span lang="en">Embedded systems (AUTOSAR)</span><span lang="pt">Sistemas embebidos (AUTOSAR)</span></li>
+        <li>Jenkins <span lang="en">and</span><span lang="pt">e</span> CI/CD</li>
+        <li>Git <span lang="en">and</span><span lang="pt">e</span> Jira</li>
+        <li><span lang="en">Unit testing</span><span lang="pt">Testes unitários</span></li>
+        <li>MISRA <span lang="en">and</span><span lang="pt">e</span> ISO 26262</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span lang="en">Work</span><span lang="pt">Trabalho</span></h2>
+      <div class="cards">
+        <article class="card">
+          <small>Aumovio</small>
+          <h3><span lang="en">Automotive software in production</span><span lang="pt">Software automóvel em produção</span></h3>
+          <p><span lang="en">At Continental Engineering Services, now Aumovio, since 2023. I develop and test software for car components, following the industry's quality and safety standards (MISRA, ASPICE, ISO 26262).</span><span lang="pt">Desde 2023 na Continental Engineering Services, hoje Aumovio. Desenvolvo e testo software para componentes de automóveis, seguindo as normas de qualidade e segurança do setor (MISRA, ASPICE, ISO 26262).</span></p>
+        </article>
+        <article class="card">
+          <small>Aumovio</small>
+          <h3><span lang="en">Automated deliveries instead of manual ones</span><span lang="pt">Entregas automáticas em vez de manuais</span></h3>
+          <p><span lang="en">I built and maintain a Jenkins pipeline that delivers technical data to car manufacturers automatically, with less manual work and faster releases.</span><span lang="pt">Construí e mantenho um pipeline no Jenkins que entrega dados técnicos aos fabricantes automóveis de forma automática, com menos trabalho manual e lançamentos mais rápidos.</span></p>
+        </article>
+        <article class="card">
+          <small>Aumovio</small>
+          <h3><span lang="en">A custom internal tool</span><span lang="pt">Ferramenta interna à medida</span></h3>
+          <p><span lang="en">A Python application with a graphical interface that helps the team find bugs faster.</span><span lang="pt">Uma aplicação em Python, com interface gráfica, que ajuda a equipa a encontrar erros mais depressa.</span></p>
+        </article>
+        <article class="card">
+          <small><span lang="en">MSc thesis · Continental</span><span lang="pt">Tese de mestrado · Continental</span></small>
+          <h3><span lang="en">Measuring performance in real time</span><span lang="pt">Medir o desempenho em tempo real</span></h3>
+          <p><span lang="en">I designed and built a module that measures the processor load of a car control unit in real time, for better monitoring and diagnostics.</span><span lang="pt">Desenhei e implementei um módulo que mede em tempo real a carga do processador de uma unidade de controlo automóvel, para melhor monitorização e diagnóstico.</span></p>
+        </article>
+        <article class="card">
+          <small><span lang="en">Co-founder</span><span lang="pt">Cofundador</span></small>
+          <h3>SproutBolt</h3>
+          <p><span lang="en">With Leonardo Marques, I run SproutBolt: websites, online stores, apps and automation for cafés, salons, associations and other local businesses.</span><span lang="pt">Com o Leonardo Marques, gerimos a SproutBolt: websites, lojas online, apps e automação para cafés, cabeleireiros, associações e outros negócios locais.</span> <a href="https://sproutbolt.com" target="_blank" rel="noopener">sproutbolt.com ↗</a></p>
+        </article>
+        <article class="card card--photo">
+          <img src="img/greentrack-equipa.jpg" alt="The GreenTrack team" loading="lazy">
+          <div>
+            <small>Fundação EDP</small>
+            <h3><span lang="en">GreenTrack, an award-winning AI app</span><span lang="pt">GreenTrack, uma app com IA premiada</span></h3>
+            <p><span lang="en">I was part of the team of four that built GreenTrack, an app that reads electricity bills and compares tariffs. It won Fundação EDP's Escola da Energia.</span><span lang="pt">Fiz parte da equipa de quatro que criou o GreenTrack, uma app que lê faturas de eletricidade e compara tarifários. Venceu a Escola da Energia da Fundação EDP.</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2><span lang="en">Education</span><span lang="pt">Formação</span></h2>
+      <ul class="timeline">
+        <li><span>2021 – 2023</span><div><strong><span lang="en">Master's in Electrical and Computer Engineering</span><span lang="pt">Mestrado em Engenharia Eletrotécnica e de Computadores</span></strong><br>FEUP, <span lang="en">University of Porto</span><span lang="pt">Universidade do Porto</span></div></li>
+        <li><span>2018 – 2021</span><div><strong><span lang="en">Bachelor's in Electrical and Computer Engineering</span><span lang="pt">Licenciatura em Engenharia Eletrotécnica e de Computadores</span></strong><br>FEUP, <span lang="en">University of Porto</span><span lang="pt">Universidade do Porto</span><br><small><span lang="en">Integrated master's programme, 2018 to 2023</span><span lang="pt">Mestrado integrado, de 2018 a 2023</span></small></div></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>© 2026 Miguel Almeida</footer>
+</div>
+<script>
+  (function () {
+    var root = document.documentElement;
+    function set(lang) {
+      root.dataset.lang = lang;
+      root.lang = lang === 'pt' ? 'pt-PT' : 'en';
+      document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.setLang === lang)); });
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    set(saved || (/^pt\b/i.test(navigator.language || '') ? 'pt' : 'en'));
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.setLang); }); });
+  })();
+</script>
+</body>
+</html>

@@ -4,171 +4,524 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Miguel Almeida · Software engineer</title>
-<meta name="description" content="Miguel Almeida, software engineer in Aveiro, Portugal. Automotive software at Aumovio (formerly Continental), co-founder of SproutBolt.">
+<meta name="description" content="Miguel Almeida, software engineer in Aveiro, Portugal. Automotive software at Aumovio (formerly Continental).">
+<meta name="theme-color" content="#0B0907">
 <meta property="og:title" content="Miguel Almeida · Software engineer">
-<meta property="og:description" content="Automotive software at Aumovio (formerly Continental), co-founder of SproutBolt.">
-<meta property="og:image" content="https://miguel-47.github.io/img/miguel.jpg">
+<meta property="og:description" content="Automotive software at Aumovio (formerly Continental).">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://miguel-47.github.io/img/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Miguel Almeida, software engineer: Software where nothing can fail.">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://miguel-47.github.io/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23123b5e'/><text x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='700' font-size='30' fill='%23fff'>MA</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230B0907'/><text x='32' y='43' text-anchor='middle' font-family='Georgia' font-weight='700' font-size='30' fill='%23F0A93B'>MA</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f7f8fa; --surface: #ffffff; --ink: #14202b; --muted: #55636f; --line: #dfe4ea;
-    --accent: #1f5f99; --accent-soft: #e6eff8; --mono: "JetBrains Mono", ui-monospace, monospace;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #0e141a; --surface: #151e26; --ink: #e7edf2; --muted: #9aa8b4; --line: #26323d; --accent: #7fb6ea; --accent-soft: #1a2a39; }
+    --bg: #0B0907; --bg2: #15110D; --ink: #EFE8DC; --muted: #A39A8C; --line: rgba(239,232,220,.12);
+    --amber: #F0A93B; --red: #E5534B;
+    --serif: "Fraunces", Georgia, serif; --sans: "Instrument Sans", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace;
+    --ease: cubic-bezier(.22,1,.36,1);
+    color-scheme: dark;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 Inter, system-ui, sans-serif; }
-  a { color: var(--accent); }
-  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
-  html[data-lang="en"] [lang="pt"], html[data-lang="pt"] [lang="en"] { display: none; }
-  header.top { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
-  .name { font-weight: 700; text-decoration: none; color: var(--ink); }
-  .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
-  .lang button { font: 500 13px var(--mono); background: none; border: 0; color: var(--muted); padding: 6px 12px; cursor: pointer; }
-  .lang button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
-  .hero { display: grid; grid-template-columns: 160px 1fr; gap: 32px; align-items: center; padding: 40px 0 56px; }
-  .hero img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; }
-  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.02em; }
-  .role { color: var(--muted); margin: 0 0 16px; }
-  .lead { font-size: 1.15rem; margin: 0 0 20px; max-width: 34em; }
-  .links { display: flex; flex-wrap: wrap; gap: 10px; }
-  .btn { display: inline-block; padding: 9px 16px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 500; }
-  .btn--main { background: var(--accent); border-color: var(--accent); color: var(--surface); }
-  section { padding: 40px 0; border-top: 1px solid var(--line); }
-  h2 { font: 500 13px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 20px; }
-  .skills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
-  .skills li { background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; font-size: .95rem; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
-  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
-  .card small { font: 500 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
-  .card h3 { margin: 6px 0 8px; font-size: 1.1rem; }
-  .card p { margin: 0; color: var(--muted); }
-  .card--photo { padding: 0; overflow: hidden; grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
-  .card--photo img { width: 100%; height: 100%; object-fit: cover; min-height: 220px; }
-  .card--photo div { padding: 20px; }
-  .timeline { list-style: none; padding: 0; margin: 0; }
-  .timeline li { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
-  .timeline li:last-child { border-bottom: 0; }
-  .timeline span { font: 500 13px var(--mono); color: var(--muted); }
-  footer { padding: 32px 0 48px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
+  html { background: var(--bg); }
+  html.lenis, html.lenis body { height: auto; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 var(--sans); overflow-x: clip; }
+  a { color: inherit; }
+  img { max-width: 100%; height: auto; display: block; }
+  :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
+  ::selection { background: var(--amber); color: var(--bg); }
+  html[data-lang="en"] [lang="pt"], html[data-lang="pt"] [lang="en"] { display: none !important; }
+  h1, h2, h3, p { text-wrap: pretty; }
+  h1, h2, h3 { text-wrap: balance; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
+  .label { font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .14em; color: var(--muted); margin: 0; }
+  .label b { color: var(--amber); font-weight: 500; }
+
+  /* nav */
+  .nav { position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 20; display: flex; align-items: center; gap: 4px;
+    padding: 6px; border: 1px solid var(--line); border-radius: 999px; background: rgba(11,9,7,.6); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    width: max-content; max-width: calc(100vw - 32px); }
+  .nav a, .nav button { font: 500 13px var(--sans); color: var(--ink); text-decoration: none; background: none; border: 0; padding: 8px 12px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+  .nav a:hover, .nav button:hover { background: rgba(239,232,220,.08); }
+  .nav .me { font: 600 15px var(--serif); padding-left: 14px; }
+  .nav .cta { background: var(--amber); color: var(--bg); font-weight: 600; }
+  .nav .cta:hover { background: #f6bd60; }
+  .lang { display: flex; font-family: var(--mono); }
+  .lang button { font: 500 12px var(--mono); color: var(--muted); padding: 8px 8px; }
+  .lang button[aria-pressed="true"] { color: var(--amber); }
+  .snd { display: flex; align-items: center; gap: 2px; height: 33px; }
+  .snd i { display: block; width: 2px; height: 4px; background: var(--muted); border-radius: 1px; transition: height .3s var(--ease), background .3s; }
+  .snd[aria-pressed="true"] i { background: var(--amber); animation: bar 1.2s ease-in-out infinite; }
+  .snd[aria-pressed="true"] i:nth-child(2) { animation-delay: -.4s; } .snd[aria-pressed="true"] i:nth-child(3) { animation-delay: -.8s; }
+  @keyframes bar { 0%,100% { height: 4px; } 50% { height: 13px; } }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* decode text */
+  .w { display: inline-block; white-space: nowrap; }
+  .ch { display: inline-block; text-align: center; }
+
+  /* hero */
+  .hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding-block: 120px 72px; position: relative; }
+  .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(60% 50% at 78% 92%, rgba(240,169,59,.13), transparent 70%); }
+  .kicker { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+  .kicker img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; filter: grayscale(.35); }
+  h1 { font: 600 clamp(3rem, 9.4vw, 9.4rem)/.94 var(--serif); letter-spacing: -.035em; margin: 0 0 32px; font-variation-settings: "opsz" 144; }
+  h1 em, .big em { font-style: italic; font-weight: 500; color: var(--amber); }
+  .lead { font-size: clamp(1.05rem, 1.6vw, 1.3rem); max-width: 36em; margin: 0 0 28px; color: #d9d1c4; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none; font-weight: 500; font-size: 15px; transition: border-color .3s, background .3s; }
+  .btn:hover { border-color: rgba(239,232,220,.4); }
+  .btn--main { background: var(--amber); border-color: var(--amber); color: var(--bg); font-weight: 600; }
+  .btn--main:hover { background: #f6bd60; border-color: #f6bd60; }
+  .cue { position: absolute; right: 0; bottom: 76px; writing-mode: vertical-rl; }
+
+  /* tagline */
+  .tagline { height: 230vh; }
+  .tagline .pin { position: sticky; top: 0; height: 100vh; height: 100svh; display: flex; align-items: center; }
+  .big { font: 500 clamp(1.9rem, 4.6vw, 4.2rem)/1.12 var(--serif); letter-spacing: -.025em; margin: 0; max-width: 20em; }
+  .wd { display: inline-block; opacity: .16; filter: blur(6px); }
+
+  /* sections */
+  .sec-head { display: grid; gap: 14px; margin-bottom: clamp(36px, 6vw, 72px); max-width: 44em; }
+  h2 { font: 600 clamp(2.2rem, 5.4vw, 4.6rem)/1 var(--serif); letter-spacing: -.03em; margin: 0; }
+  .intro { color: var(--muted); margin: 0; font-size: 1.08rem; }
+  section.block { padding: clamp(80px, 14vw, 180px) 0; }
+
+  .rows { border-top: 1px solid var(--line); }
+  .row { display: grid; grid-template-columns: 200px 1fr 1fr; gap: 32px; padding: 34px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .row h3 { font: 500 clamp(1.5rem, 2.6vw, 2.3rem)/1.1 var(--serif); letter-spacing: -.02em; margin: 0; }
+  .row p { margin: 0; color: var(--muted); }
+  .row:hover h3 { color: var(--amber); }
+  .row h3 { transition: color .4s var(--ease); }
+
+  .marq { overflow: hidden; border-block: 1px solid var(--line); padding: 18px 0; margin-bottom: clamp(56px, 9vw, 110px); }
+  .mrow { display: flex; white-space: nowrap; will-change: transform; font: 500 clamp(1.8rem, 4.4vw, 3.6rem)/1.15 var(--serif); letter-spacing: -.02em; }
+  .mrow + .mrow { color: var(--muted); font-style: italic; font-weight: 400; }
+  .mrow span { padding-right: .55em; }
+  .mrow span::after { content: "·"; padding-left: .55em; color: var(--amber); font-style: normal; }
+
+
+  /* beyond */
+  .duo { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(28px, 4vw, 56px); }
+  .card { border-top: 1px solid var(--line); padding-top: 22px; }
+  .card h3 { font: 600 clamp(1.8rem, 3.4vw, 3rem)/1.05 var(--serif); letter-spacing: -.03em; margin: 10px 0 14px; }
+  .card p { color: var(--muted); margin: 0 0 16px; }
+  a.more { white-space: nowrap; color: var(--amber); text-decoration: none; border-bottom: 1px solid rgba(240,169,59,.4); }
+  a.more:hover { border-color: var(--amber); }
+  .photo { border-radius: 14px; overflow: hidden; margin-bottom: 22px; aspect-ratio: 16 / 10; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05) brightness(.8); transition: filter 1.2s var(--ease), transform 1.2s var(--ease); }
+  .photo:hover img, .photo.in img { filter: none; }
+  .photo:hover img { transform: scale(1.03); }
+
+  /* education */
+  .edu .row { grid-template-columns: 200px 1fr; }
+  .edu .yr { font: 500 14px var(--mono); color: var(--amber); padding-top: 8px; }
+  .edu small { color: var(--muted); font-size: 14px; }
+
+  /* contact */
+  .contact { text-align: left; padding-bottom: 120px; }
+  .contact h2 { font-size: clamp(2.8rem, 8vw, 7.4rem); line-height: .96; margin-bottom: 32px; }
+  .contact h2 em { font-style: italic; font-weight: 500; color: var(--amber); }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 96px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer a { color: var(--muted); }
+
+
+  /* reveal */
+  .rv { opacity: 0; transform: translateY(32px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .rv.in { opacity: 1; transform: none; }
+
+  /* cursor */
+  .cur { position: fixed; left: 0; top: 0; width: 32px; height: 32px; margin: -16px 0 0 -16px; border: 1px solid rgba(239,232,220,.55); border-radius: 50%;
+    pointer-events: none; z-index: 50; transition: width .35s var(--ease), height .35s var(--ease), margin .35s var(--ease), background .35s, border-color .35s; display: none; }
+  .cur.big { width: 72px; height: 72px; margin: -36px 0 0 -36px; background: rgba(240,169,59,.12); border-color: var(--amber); }
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .cur { display: block; }
+    body, a, button { cursor: none; }
+  }
+
+  @media (max-width: 900px) {
+    .row, .edu .row { grid-template-columns: 1fr; gap: 10px; }
+    .duo { grid-template-columns: 1fr; }
+  }
   @media (max-width: 640px) {
-    .hero { grid-template-columns: 1fr; gap: 20px; padding-top: 16px; }
-    .hero img { width: 120px; height: 120px; }
-    .card--photo { grid-template-columns: 1fr; }
-    .timeline li { grid-template-columns: 1fr; gap: 2px; }
+    .nav .hide-s { display: none; }
+    .nav .me { padding-right: 6px; }
+    .cue { display: none; }
+    .hero { padding-bottom: 96px; }
+    .kicker { align-items: flex-start; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rv { opacity: 1; transform: none; transition: none; }
+    .wd { opacity: 1; filter: none; }
+    .tagline { height: auto; } .tagline .pin { position: static; height: auto; padding: 120px 0; }
+    .photo img { transition: none; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <a class="name" href="#">Miguel Almeida</a>
-    <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-      <button type="button" data-set-lang="pt" aria-pressed="false">PT</button>
-    </div>
-  </header>
+<a class="sr" href="#work">Skip to work</a>
 
-  <main>
-    <div class="hero">
-      <img src="img/miguel.jpg" alt="Miguel Almeida">
-      <div>
-        <h1>Miguel Almeida</h1>
-        <p class="role"><span lang="en">Software engineer · Aveiro, Portugal</span><span lang="pt">Engenheiro de software · Aveiro, Portugal</span></p>
-        <p class="lead">
-          <span lang="en">I build software for the automotive industry, where nothing can fail. I also co-founded SproutBolt, which makes websites and apps for small local businesses.</span>
-          <span lang="pt">Desenvolvo software para a indústria automóvel, onde nada pode falhar. Sou também cofundador da SproutBolt, que faz websites e apps para pequenos negócios locais.</span>
-        </p>
-        <div class="links">
-          <a class="btn btn--main" href="mailto:luismiguelra1015@gmail.com"><span lang="en">Email me</span><span lang="pt">Enviar email</span></a>
-          <a class="btn" href="miguel-almeida-cv.pdf" download><span lang="en">Download CV</span><span lang="pt">Descarregar CV</span></a>
-          <a class="btn" href="https://www.linkedin.com/in/miguel-almeida-22a58a284" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/Miguel-47" target="_blank" rel="noopener">GitHub</a>
-        </div>
+<nav class="nav" aria-label="Main">
+  <a class="me" href="#top">M<span class="hide-s">iguel Almeida</span><span class="sr">iguel Almeida</span></a>
+  <a class="hide-s" href="#work"><span lang="en">Work</span><span lang="pt">Trabalho</span></a>
+  <a class="hide-s" href="#skills"><span lang="en">Skills</span><span lang="pt">Competências</span></a>
+  <a class="hide-s" href="#contact"><span lang="en">Contact</span><span lang="pt">Contacto</span></a>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-set-lang="pt" aria-pressed="false">PT</button>
+  </div>
+  <button type="button" class="snd" id="snd" aria-pressed="false" aria-label="Music"><i></i><i></i><i></i></button>
+  <a class="cta" href="mailto:luismiguelra1015@gmail.com"><span lang="en">Email me</span><span lang="pt">Enviar email</span></a>
+</nav>
+
+<main>
+  <section id="top" class="hero wrap" data-ch="0">
+    <div class="kicker">
+      <img src="img/miguel.jpg" alt="Miguel Almeida" width="52" height="52">
+      <p class="label"><b>Miguel Almeida</b> · <span lang="en">Software engineer · Aveiro, Portugal</span><span lang="pt">Engenheiro de software · Aveiro, Portugal</span></p>
+    </div>
+    <h1>
+      <span lang="en"><span class="dc">Software where nothing can</span> <em class="dc">fail.</em></span>
+      <span lang="pt"><span class="dc">Software onde nada pode</span> <em class="dc">falhar.</em></span>
+    </h1>
+    <p class="lead">
+      <span lang="en">I build and test software for car components at Aumovio, formerly Continental Engineering Services, following the industry's safety standards.</span>
+      <span lang="pt">Desenvolvo e testo software para componentes de automóveis na Aumovio, antiga Continental Engineering Services, seguindo as normas de segurança do setor.</span>
+    </p>
+    <div class="btns">
+      <a class="btn btn--main" href="mailto:luismiguelra1015@gmail.com"><span lang="en">Email me</span><span lang="pt">Enviar email</span></a>
+      <a class="btn" href="miguel-almeida-cv.pdf" download><span lang="en">Download CV</span><span lang="pt">Descarregar CV</span></a>
+      <a class="btn" href="https://www.linkedin.com/in/miguel-almeida-22a58a284" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/Miguel-47" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="label cue" aria-hidden="true"><span lang="en">Scroll</span><span lang="pt">Deslize</span></p>
+  </section>
+
+  <section class="tagline" data-ch="0">
+    <div class="pin wrap">
+      <p class="big tl" lang="en">In a car, a bug is not an inconvenience. So every line is written to a standard, tested, and traced back to a requirement.</p>
+      <p class="big tl" lang="pt">Num carro, um erro não é um incómodo. Por isso cada linha é escrita segundo uma norma, testada e ligada a um requisito.</p>
+    </div>
+  </section>
+
+  <section id="work" class="block" data-ch="1">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="label"><span lang="en">Work</span><span lang="pt">Trabalho</span></p>
+        <h2><span lang="en" class="dc">Under the bonnet</span><span lang="pt" class="dc">Debaixo do capô</span></h2>
+        <p class="intro"><span lang="en">At Continental Engineering Services, now Aumovio, since 2023.</span><span lang="pt">Na Continental Engineering Services, hoje Aumovio, desde 2023.</span></p>
       </div>
-    </div>
-
-    <section>
-      <h2><span lang="en">Skills</span><span lang="pt">Competências</span></h2>
-      <ul class="skills">
-        <li>C <span lang="en">and</span><span lang="pt">e</span> Python</li>
-        <li><span lang="en">Embedded systems (AUTOSAR)</span><span lang="pt">Sistemas embebidos (AUTOSAR)</span></li>
-        <li>Jenkins <span lang="en">and</span><span lang="pt">e</span> CI/CD</li>
-        <li>Git <span lang="en">and</span><span lang="pt">e</span> Jira</li>
-        <li><span lang="en">Unit testing</span><span lang="pt">Testes unitários</span></li>
-        <li>MISRA <span lang="en">and</span><span lang="pt">e</span> ISO 26262</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2><span lang="en">Work</span><span lang="pt">Trabalho</span></h2>
-      <div class="cards">
-        <article class="card">
-          <small>Aumovio</small>
+      <div class="rows">
+        <article class="row rv">
+          <p class="label">Aumovio</p>
           <h3><span lang="en">Automotive software in production</span><span lang="pt">Software automóvel em produção</span></h3>
-          <p><span lang="en">At Continental Engineering Services, now Aumovio, since 2023. I develop and test software for car components, following the industry's quality and safety standards (MISRA, ASPICE, ISO 26262).</span><span lang="pt">Desde 2023 na Continental Engineering Services, hoje Aumovio. Desenvolvo e testo software para componentes de automóveis, seguindo as normas de qualidade e segurança do setor (MISRA, ASPICE, ISO 26262).</span></p>
+          <p><span lang="en">I develop and test software for car components, following the industry's quality and safety standards (MISRA, ASPICE, ISO 26262).</span><span lang="pt">Desenvolvo e testo software para componentes de automóveis, seguindo as normas de qualidade e segurança do setor (MISRA, ASPICE, ISO 26262).</span></p>
         </article>
-        <article class="card">
-          <small>Aumovio</small>
+        <article class="row rv">
+          <p class="label">Aumovio</p>
           <h3><span lang="en">Automated deliveries instead of manual ones</span><span lang="pt">Entregas automáticas em vez de manuais</span></h3>
           <p><span lang="en">I built and maintain a Jenkins pipeline that delivers technical data to car manufacturers automatically, with less manual work and faster releases.</span><span lang="pt">Construí e mantenho um pipeline no Jenkins que entrega dados técnicos aos fabricantes automóveis de forma automática, com menos trabalho manual e lançamentos mais rápidos.</span></p>
         </article>
-        <article class="card">
-          <small>Aumovio</small>
+        <article class="row rv">
+          <p class="label">Aumovio</p>
           <h3><span lang="en">A custom internal tool</span><span lang="pt">Ferramenta interna à medida</span></h3>
           <p><span lang="en">A Python application with a graphical interface that helps the team find bugs faster.</span><span lang="pt">Uma aplicação em Python, com interface gráfica, que ajuda a equipa a encontrar erros mais depressa.</span></p>
         </article>
-        <article class="card">
-          <small><span lang="en">MSc thesis · Continental</span><span lang="pt">Tese de mestrado · Continental</span></small>
+        <article class="row rv">
+          <p class="label"><span lang="en">MSc thesis · Continental</span><span lang="pt">Tese de mestrado · Continental</span></p>
           <h3><span lang="en">Measuring performance in real time</span><span lang="pt">Medir o desempenho em tempo real</span></h3>
-          <p><span lang="en">I designed and built a module that measures the processor load of a car control unit in real time, for better monitoring and diagnostics.</span><span lang="pt">Desenhei e implementei um módulo que mede em tempo real a carga do processador de uma unidade de controlo automóvel, para melhor monitorização e diagnóstico.</span></p>
-        </article>
-        <article class="card">
-          <small><span lang="en">Co-founder</span><span lang="pt">Cofundador</span></small>
-          <h3>SproutBolt</h3>
-          <p><span lang="en">With Leonardo Marques, I run SproutBolt: websites, online stores, apps and automation for cafés, salons, associations and other local businesses.</span><span lang="pt">Com o Leonardo Marques, gerimos a SproutBolt: websites, lojas online, apps e automação para cafés, cabeleireiros, associações e outros negócios locais.</span> <a href="https://sproutbolt.com" target="_blank" rel="noopener">sproutbolt.com ↗</a></p>
-        </article>
-        <article class="card card--photo">
-          <img src="img/greentrack-equipa.jpg" alt="The GreenTrack team" loading="lazy">
-          <div>
-            <small>Fundação EDP</small>
-            <h3><span lang="en">GreenTrack, an award-winning AI app</span><span lang="pt">GreenTrack, uma app com IA premiada</span></h3>
-            <p><span lang="en">I was part of the team of four that built GreenTrack, an app that reads electricity bills and compares tariffs. It won Fundação EDP's Escola da Energia.</span><span lang="pt">Fiz parte da equipa de quatro que criou o GreenTrack, uma app que lê faturas de eletricidade e compara tarifários. Venceu a Escola da Energia da Fundação EDP.</span></p>
-          </div>
+          <p><span lang="en">I designed and built a module that measures the processor load of a car control unit in real time, for better monitoring and diagnostics.</span><span lang="pt">Desenhei e implementei um módulo que mede em tempo real a carga do processador de uma unidade de controlo automóvel, para melhor monitorização e diagnóstico.</span> <a class="more" href="https://drive.google.com/file/d/1W4nd1e1T9j5TwPfJEcpuI5ddDgY6g-EW/view" target="_blank" rel="noopener"><span lang="en">Read the thesis</span><span lang="pt">Ler a tese</span> ↗</a></p>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2><span lang="en">Education</span><span lang="pt">Formação</span></h2>
-      <ul class="timeline">
-        <li><span>2021 – 2023</span><div><strong><span lang="en">Master's in Electrical and Computer Engineering</span><span lang="pt">Mestrado em Engenharia Eletrotécnica e de Computadores</span></strong><br>FEUP, <span lang="en">University of Porto</span><span lang="pt">Universidade do Porto</span></div></li>
-        <li><span>2018 – 2021</span><div><strong><span lang="en">Bachelor's in Electrical and Computer Engineering</span><span lang="pt">Licenciatura em Engenharia Eletrotécnica e de Computadores</span></strong><br>FEUP, <span lang="en">University of Porto</span><span lang="pt">Universidade do Porto</span><br><small><span lang="en">Integrated master's programme, 2018 to 2023</span><span lang="pt">Mestrado integrado, de 2018 a 2023</span></small></div></li>
-      </ul>
-    </section>
-  </main>
+  <section id="skills" class="block" data-ch="2">
+    <div class="marq" aria-hidden="true">
+      <div class="mrow" data-dir="-1"></div>
+      <div class="mrow" data-dir="1"></div>
+    </div>
+    <ul class="sr" id="skills">
+      <li>C</li><li>Python</li><li>AUTOSAR</li><li>MISRA</li><li>ISO 26262</li><li>ASPICE</li><li>Jenkins</li><li>CI/CD</li><li>Git</li><li>Jira</li><li>Unit testing</li>
+    </ul>
+    <div class="wrap">
+      <div class="sec-head rv" style="margin-bottom:0">
+        <p class="label"><span lang="en">Skills</span><span lang="pt">Competências</span></p>
+        <h2><span lang="en" class="dc">Expect the fault</span><span lang="pt" class="dc">Contar com a falha</span></h2>
+        <p class="intro"><span lang="en">Safety software does not assume everything works. It watches for faults, falls back to a safe state, and recovers. That is what C, AUTOSAR, MISRA and ISO 26262 are for in my daily work, with Jenkins, Git, Jira and unit tests around them.</span><span lang="pt">O software de segurança não assume que tudo funciona. Vigia as falhas, recua para um estado seguro e recupera. É para isso que servem o C, o AUTOSAR, a MISRA e a ISO 26262 no meu dia a dia, com Jenkins, Git, Jira e testes unitários à volta.</span></p>
+      </div>
+    </div>
+  </section>
 
-  <footer>© 2026 Miguel Almeida</footer>
-</div>
+  <section id="beyond" class="block" data-ch="3">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="label"><span lang="en">Beyond the car</span><span lang="pt">Fora do carro</span></p>
+        <h2><span lang="en" class="dc">An award, as a team</span><span lang="pt" class="dc">Um prémio, em equipa</span></h2>
+      </div>
+      <article class="duo rv">
+        <div class="photo"><img src="img/greentrack-equipa.jpg" alt="The GreenTrack team" loading="lazy"></div>
+        <div class="card">
+          <p class="label">Fundação EDP</p>
+          <h3><span lang="en">GreenTrack, an award-winning AI app</span><span lang="pt">GreenTrack, uma app com IA premiada</span></h3>
+          <p><span lang="en">I was part of the team of four that built GreenTrack, an app that reads electricity bills and compares tariffs. It won Fundação EDP's Escola da Energia.</span><span lang="pt">Fiz parte da equipa de quatro que criou o GreenTrack, uma app que lê faturas de eletricidade e compara tarifários. Venceu a Escola da Energia da Fundação EDP.</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="education" class="edu block" data-ch="3" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="label"><span lang="en">Education</span><span lang="pt">Formação</span></p>
+        <h2><span lang="en" class="dc">FEUP, Porto</span><span lang="pt" class="dc">FEUP, Porto</span></h2>
+      </div>
+      <div class="rows">
+        <div class="row rv"><p class="yr">2021 – 2023</p><div><h3><span lang="en">Master's in Electrical and Computer Engineering</span><span lang="pt">Mestrado em Engenharia Eletrotécnica e de Computadores</span></h3><small>FEUP, <span lang="en">University of Porto</span><span lang="pt">Universidade do Porto</span></small></div></div>
+        <div class="row rv"><p class="yr">2018 – 2021</p><div><h3><span lang="en">Bachelor's in Electrical and Computer Engineering</span><span lang="pt">Licenciatura em Engenharia Eletrotécnica e de Computadores</span></h3><small>FEUP, <span lang="en">University of Porto · integrated master's programme, 2018 to 2023</span><span lang="pt">Universidade do Porto · mestrado integrado, de 2018 a 2023</span></small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact block" data-ch="3">
+    <div class="wrap">
+      <p class="label rv" style="margin-bottom:18px"><span lang="en">Contact</span><span lang="pt">Contacto</span></p>
+      <h2 class="rv"><span lang="en">Let's build something that <em>holds.</em></span><span lang="pt">Vamos construir algo que <em>aguente.</em></span></h2>
+      <div class="btns rv">
+        <a class="btn btn--main" href="mailto:luismiguelra1015@gmail.com"><span lang="en">Email me</span><span lang="pt">Enviar email</span></a>
+        <a class="btn" href="miguel-almeida-cv.pdf" download><span lang="en">Download CV</span><span lang="pt">Descarregar CV</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/miguel-almeida-22a58a284" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Miguel-47" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Miguel Almeida</span>
+    <a href="#top"><span lang="en">Back to top</span><span lang="pt">Voltar ao topo</span></a>
+  </div>
+</footer>
+
+<div class="cur" aria-hidden="true"></div>
+
+<script src="js/lenis.min.js"></script>
 <script>
-  (function () {
-    var root = document.documentElement;
-    function set(lang) {
-      root.dataset.lang = lang;
-      root.lang = lang === 'pt' ? 'pt-PT' : 'en';
-      document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.setLang === lang)); });
-      try { localStorage.setItem('lang', lang); } catch (e) {}
+(function () {
+  var root = document.documentElement;
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+  var visible = function (el) { return el.getClientRects().length > 0; };
+
+  /* language (kept from the previous site) */
+  function setLang(lang) {
+    root.dataset.lang = lang;
+    root.lang = lang === 'pt' ? 'pt-PT' : 'en';
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.setLang === lang)); });
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+    measure();
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.setLang); }); });
+
+  /* decode: letters scramble, then lock (glyph every 55 ms, settle in ~0.8 s) */
+  var GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&*+=/<>';
+  function split(el) {
+    if (el._cells) return el._cells;
+    var text = el.textContent.trim();
+    el.setAttribute('aria-label', text); el.textContent = '';
+    var cells = [];
+    text.split(' ').forEach(function (word, wi) {
+      if (wi) el.appendChild(document.createTextNode(' '));
+      var w = document.createElement('span'); w.className = 'w'; w.setAttribute('aria-hidden', 'true');
+      Array.from(word).forEach(function (ch) {
+        var s = document.createElement('span'); s.className = 'ch'; s.textContent = ch; w.appendChild(s);
+        cells.push({ el: s, ch: ch, last: 0 });
+      });
+      el.appendChild(w);
+    });
+    cells.forEach(function (c) { c.el.style.width = c.el.getBoundingClientRect().width + 'px'; });
+    return (el._cells = cells);
+  }
+  function decode(el) {
+    if (!visible(el)) return;
+    var cells = split(el);
+    if (still) return;
+    var start = performance.now(), dur = Math.min(1100, 450 + cells.length * 22);
+    (function tick(now) {
+      var done = true;
+      cells.forEach(function (x, i) {
+        if (now >= start + (i / cells.length) * dur) { x.el.textContent = x.ch; x.el.style.opacity = ''; return; }
+        done = false;
+        if (now - x.last > 55) { x.last = now; x.el.textContent = GLYPHS[(Math.random() * GLYPHS.length) | 0]; x.el.style.opacity = '.45'; }
+      });
+      if (!done) requestAnimationFrame(tick);
+    })(start);
+  }
+
+  /* reveals */
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      if (e.target.classList.contains('dc')) { if (!e.target._done) { e.target._done = 1; decode(e.target); } }
+      else e.target.classList.add('in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.2 });
+
+  /* tagline words */
+  var words = {};
+  document.querySelectorAll('.tl').forEach(function (p) {
+    var ws = p.textContent.trim().split(/\s+/);
+    p.textContent = '';
+    words[p.lang] = ws.map(function (w, i) {
+      if (i) p.appendChild(document.createTextNode(' '));
+      var s = document.createElement('span'); s.className = 'wd'; s.textContent = w; p.appendChild(s); return { el: s, k: -1 };
+    });
+  });
+
+  /* marquee */
+  var SKILLS = ['C', 'Python', 'AUTOSAR', 'MISRA', 'ISO 26262', 'ASPICE'], TOOLS = ['Jenkins', 'CI/CD', 'Git', 'Jira', 'Unit testing', 'Embedded systems'];
+  var rows = Array.from(document.querySelectorAll('.mrow')).map(function (el, i) {
+    var list = (i ? TOOLS : SKILLS).map(function (s) { return '<span>' + s + '</span>'; }).join('');
+    el.innerHTML = list + list + list + list;
+    return { el: el, dir: +el.dataset.dir, x: 0, w: 0 };
+  });
+
+  /* sound: calm generative piano, off by default */
+  var Sound = (function () {
+    var ctx, master, verb, dry, on = false, sec = 0, timer = null, next = 0, bar = 0, beat = 0, mel = 4;
+    var PROG = [[[38,[57,62,65]],[34,[58,62,65]]], [[41,[57,60,65]],[36,[55,60,64]]], [[33,[57,60,64]],[38,[57,62,65]]], [[34,[58,62,65]],[38,[57,62,66]]]];
+    var SCALE = [62, 64, 65, 67, 69, 72, 74, 76, 77], BEAT = 60 / 58;
+    var hz = function (m) { return 440 * Math.pow(2, (m - 69) / 12); };
+    function init() {
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      master = ctx.createGain(); master.gain.value = 0;
+      var comp = ctx.createDynamicsCompressor(); comp.threshold.value = -24; comp.ratio.value = 3;
+      var tone = ctx.createBiquadFilter(); tone.type = 'lowpass'; tone.frequency.value = 3200;
+      master.connect(tone); tone.connect(comp); comp.connect(ctx.destination);
+      verb = ctx.createConvolver();
+      var len = Math.floor(ctx.sampleRate * 4.2), ir = ctx.createBuffer(2, len, ctx.sampleRate);
+      for (var c = 0; c < 2; c++) { var d = ir.getChannelData(c); for (var i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.6); }
+      verb.buffer = ir;
+      var wetF = ctx.createBiquadFilter(); wetF.type = 'lowpass'; wetF.frequency.value = 1800;
+      var wet = ctx.createGain(); wet.gain.value = 0.55; verb.connect(wetF); wetF.connect(wet); wet.connect(master);
+      dry = ctx.createGain(); dry.gain.value = 0.7; dry.connect(master);
+      next = ctx.currentTime + 0.2;
     }
-    var saved = null;
-    try { saved = localStorage.getItem('lang'); } catch (e) {}
-    set(saved || (/^pt\b/i.test(navigator.language || '') ? 'pt' : 'en'));
-    document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.setLang); }); });
+    function note(m, t, vel, len) {
+      var f = hz(m), o = ctx.createOscillator(), mod = ctx.createOscillator(), mg = ctx.createGain(), g = ctx.createGain();
+      o.frequency.value = f; mod.frequency.value = f * 2; mod.connect(mg); mg.connect(o.frequency);
+      mg.gain.setValueAtTime(f * 0.9 * vel, t); mg.gain.exponentialRampToValueAtTime(f * 0.02, t + 0.6);
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.16 * vel, t + 0.012); g.gain.exponentialRampToValueAtTime(0.0001, t + len);
+      o.connect(g); g.connect(dry); g.connect(verb);
+      o.start(t); mod.start(t); o.stop(t + len + 0.1); mod.stop(t + len + 0.1);
+    }
+    function schedule() {
+      while (next < ctx.currentTime + 0.4) {
+        var ch = PROG[sec][bar % 2], t = next + (Math.random() - 0.5) * 0.03;
+        if (beat === 0) note(ch[0], t, 0.55, 5);
+        if (beat === 1) ch[1].forEach(function (m, i) { if (i < 2 || Math.random() < 0.5) note(m, t + i * 0.025, 0.22, 3.5); });
+        if (beat === 2 && Math.random() < 0.55) {
+          mel = clamp(mel + [-2, -1, -1, 1, 1, 2][(Math.random() * 6) | 0], 0, SCALE.length - 1);
+          note(SCALE[mel], t, 0.32, 4);
+        }
+        beat = (beat + 1) % 3; if (!beat) bar++;
+        next += BEAT;
+      }
+    }
+    document.addEventListener('visibilitychange', function () { if (ctx && on) { if (document.hidden) ctx.suspend(); else ctx.resume(); } });
+    return {
+      toggle: function () {
+        on = !on; if (on && !ctx) init();
+        if (on) { ctx.resume(); next = Math.max(next, ctx.currentTime + 0.1); if (!timer) timer = setInterval(schedule, 100); }
+        master.gain.setTargetAtTime(on ? 0.6 : 0, ctx.currentTime, on ? 1.2 : 0.4);
+        if (!on) setTimeout(function () { if (!on) { clearInterval(timer); timer = null; ctx.suspend(); } }, 1500);
+        return on;
+      },
+      section: function (s) { if (s !== sec) { sec = s; bar = 0; } }
+    };
   })();
+  var snd = document.getElementById('snd');
+  snd.addEventListener('click', function () { snd.setAttribute('aria-pressed', String(Sound.toggle())); });
+
+  /* smooth scroll */
+  var lenis = !still && window.Lenis ? new Lenis({ lerp: 0.07, wheelMultiplier: 0.9 }) : null;
+  if (lenis) document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) { var el = document.querySelector(a.getAttribute('href')); if (el) { e.preventDefault(); lenis.scrollTo(el, { duration: 1.8 }); } });
+  });
+
+  /* cursor */
+  var cur = document.querySelector('.cur'), mx = -100, my = -100, cx = -100, cy = -100;
+  addEventListener('pointermove', function (e) { mx = e.clientX; my = e.clientY; });
+  document.addEventListener('pointerover', function (e) { cur.classList.toggle('big', !!e.target.closest('a, button')); });
+
+  /* layout */
+  var tag = document.querySelector('.tagline'), chs = Array.from(document.querySelectorAll('[data-ch]'));
+  function measure() {
+    rows.forEach(function (r) { r.w = r.el.scrollWidth / 4; });
+    document.querySelectorAll('.dc').forEach(function (el) { // fluid type: re-lock letter widths
+      if (!el._cells || !visible(el)) return;
+      el._cells.forEach(function (c) { c.el.style.width = ''; });
+      el._cells.forEach(function (c) { c.el.style.width = c.el.getBoundingClientRect().width + 'px'; });
+    });
+    Object.keys(words).forEach(function (k) { words[k].forEach(function (w) { w.k = -1; }); });
+  }
+  addEventListener('resize', measure);
+
+  var last = performance.now(), prevY = scrollY, vel = 0, chapter = -1;
+  function frame(now) {
+    var dt = Math.min(0.05, (now - last) / 1000);
+    last = now;
+    if (lenis) lenis.raf(now);
+    var y = scrollY;
+    if (dt > 0) vel += ((y - prevY) / dt - vel) * 0.15;
+    prevY = y;
+
+    rows.forEach(function (r) {
+      if (!r.w) return;
+      r.x += r.dir * (still ? 0 : 40 + Math.abs(vel) * 0.5) * dt;
+      if (r.x < -r.w) r.x += r.w; if (r.x > 0) r.x -= r.w;
+      r.el.style.transform = 'translate3d(' + r.x.toFixed(1) + 'px,0,0) skewX(' + clamp(-vel * 0.006, -12, 12).toFixed(2) + 'deg)';
+    });
+
+    if (!still) {
+      var ws = words[root.dataset.lang] || [], tr = tag.getBoundingClientRect();
+      var p = clamp(-tr.top / (tr.height - innerHeight), 0, 1);
+      ws.forEach(function (w, i) {
+        var k = Math.round(clamp(p * 1.25 * ws.length - i, 0, 1) * 50) / 50;
+        if (k === w.k) return; w.k = k;
+        w.el.style.opacity = (0.16 + 0.84 * k).toFixed(2);
+        w.el.style.filter = k < 1 ? 'blur(' + ((1 - k) * 6).toFixed(1) + 'px)' : 'none';
+      });
+      cx += (mx - cx) * 0.2; cy += (my - cy) * 0.2;
+      cur.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0)';
+    }
+
+    for (var i = chs.length - 1; i >= 0; i--) {
+      if (chs[i].getBoundingClientRect().top < innerHeight / 2) { var c = +chs[i].dataset.ch; if (c !== chapter) { chapter = c; Sound.section(c); } break; }
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  setLang(saved || (/^pt\b/i.test(navigator.language || '') ? 'pt' : 'en'));
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(function () {
+    measure();
+    document.querySelectorAll('.dc, .rv').forEach(function (el) { io.observe(el); });
+    document.querySelectorAll('.photo').forEach(function (el) { io.observe(el); });
+    requestAnimationFrame(frame);
+  });
+})();
 </script>
 </body>
 </html>
